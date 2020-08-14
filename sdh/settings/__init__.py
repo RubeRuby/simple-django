@@ -1,4 +1,4 @@
-from .base import *
+# from .base import *
 
 env_name = os.getenv('ENV', 'local')
 print("env name: " + env_name)
@@ -9,3 +9,4 @@ elif env_name == 'STAGING':
     from .staging import *
 else:
     from .local import *
+
