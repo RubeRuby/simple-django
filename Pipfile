@@ -8,6 +8,8 @@ verify_ssl = true
 [packages]
 django = "*"
 mysqlclient = "*"
+gunicorn = "*"
+django-heroku = "*"
 
 [requires]
 python_version = "3.8"
