@@ -1,6 +1,6 @@
 from .base import *
 
-env_name = os.getenv('ENV_NAME', 'local')
+env_name = os.getenv('ENV', 'local')
 print("env name: " + env_name)
 
 if env_name == 'PRODUCTION':
