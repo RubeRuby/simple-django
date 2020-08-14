@@ -1,4 +1,4 @@
-from .base import *
+# from .base import *
 
 print('secret_key before:', SECRET_KEY)
 django_heroku.settings(locals())
