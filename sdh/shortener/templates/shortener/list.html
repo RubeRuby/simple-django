@@ -11,10 +11,20 @@
         {% for instance in list %}
             <tr>
                 <td>{{ instance.id }}</td>
-                <td>{{ instance.original_url }}</td>
+                <td>
+                    <a href="{{ instance.original_url }}">
+                        {{ instance.original_url }}
+                    </a>
+                </td>
                 <td>{{ instance.slug }}</td>
-                <td>http://{{ request.get_host }}/{{ instance.slug }}</td>
+                <td>
+                    <a href="http://{{ request.get_host }}/{{ instance.slug }}">
+                        http://{{ request.get_host }}/{{ instance.slug }}
+                    </a>
+                </td>
             </tr>
         {% endfor %}
     </table>
+
+    <div><a href="{% url 'shorten-url' %}">Shorten</a></div>
 {% endblock %}

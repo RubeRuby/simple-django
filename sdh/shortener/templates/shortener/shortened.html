@@ -1,7 +1,11 @@
 {% extends 'shortener/base.html' %}
 
 {% block content %}
-    {{ instance.id }}
-    {{ instance.slug }}
-    {{ instance.original_url }}
+    <p>ID: {{ instance.id }}</p>
+    <p>Slug: {{ instance.slug }}</p>
+    <p>Original url: <a href="{{ instance.original_url }}">{{ instance.original_url }}</a></p>
+    <p>Shortened url: <a href="http://{{ request.get_host }}/{{ instance.slug }}">http://{{ request.get_host }}/{{ instance.slug }}</a></p>
+
+    <div><a href="{% url 'shortened-list' %}">List</a></div>
+    <div><a href="{% url 'shorten-url' %}">Shorten</a></div>    
 {% endblock %}
