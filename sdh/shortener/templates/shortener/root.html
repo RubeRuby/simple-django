@@ -1,0 +1,6 @@
+{% extends 'shortener/base.html' %}
+
+{% block content %}
+    <div><a href="{% url 'shortened-list' %}">List</a></div>
+    <div><a href="{% url 'shorten-url' %}">Shorten</a></div>
+{% endblock %}

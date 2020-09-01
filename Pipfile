@@ -10,6 +10,7 @@ django = "*"
 mysqlclient = "*"
 gunicorn = "*"
 django-heroku = "*"
+hashids = "*"
 
 [requires]
 python_version = "3.8"

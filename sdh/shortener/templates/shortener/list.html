@@ -1,0 +1,20 @@
+{% extends 'shortener/base.html' %}
+
+{% block content %} 
+    <table style="width:100%">
+        <tr>
+            <th>ID</th>
+            <th>Original url</th>
+            <th>Slug</th>
+            <th>Shortened url</th>
+        </tr>
+        {% for instance in list %}
+            <tr>
+                <td>{{ instance.id }}</td>
+                <td>{{ instance.original_url }}</td>
+                <td>{{ instance.slug }}</td>
+                <td>http://{{ request.get_host }}/{{ instance.slug }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -10,3 +10,5 @@ DATABASES = {
         'PORT': '3306',
     }
 }
+
+SECRET_KEY = 'SOMETHING' 
